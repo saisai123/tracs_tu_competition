@@ -15,15 +15,11 @@
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_action_compare"
-            android:title="Compare" />
+            android:title="Import" />
         <item
             android:id="@+id/nav_results"
             android:icon="@drawable/ic_action_results"
-            android:title="View Results" />
-        <item
-            android:id="@+id/nav_sleep"
-            android:icon="@drawable/ic_action_sleep"
-            android:title="Sleep" />
+            android:title="Export" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_menu_manage"
