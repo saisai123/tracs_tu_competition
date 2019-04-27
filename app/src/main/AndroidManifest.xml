@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="refresh.towson.com.tracs">
 
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permission for reading phone memory -->
-    <uses-permission android:name="andriod.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permission for reading phone memory-->
+    <uses-permission android:name="andriod.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".search"></activity>
+        <activity
+            android:name=".Team_Coach_Scrolling"
+            android:label="@string/title_activity_team__coach__scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Strength_Coach_Scrolling_Activity"
+            android:label="@string/title_activity_strength__coach__scrolling_"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -26,7 +34,7 @@
         </activity>
         <activity
             android:name=".MainScreen"
-            android:label="next1"
+            android:label="Athlete"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,6 +55,9 @@
         <activity
             android:name=".Strength_Coach"
             android:label="@string/title_activity_strength__coach"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ScrollingActivity1"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

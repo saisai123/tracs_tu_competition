@@ -76,17 +76,24 @@ public class Team_Coach extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.ic_action_profile) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(Team_Coach.this,Team_Coach_Scrolling.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+
+        } else if (id == R.id.ic_action_search) {
+
+        } else if (id == R.id.ic_action_compare) {
 
         } else if (id == R.id.nav_sleep) {
 
         } else if (id == R.id.nav_results) {
 
-        } else if (id == R.id.nav_view) {
+        } else if (id == R.id.nav_settings) {
 
         }
 

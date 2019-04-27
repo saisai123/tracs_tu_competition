@@ -1,3 +1,5 @@
+package refresh.towson.com.tracs;
+
 import android.content.Intent;
 
 public class Logout {
