@@ -1,8 +1,7 @@
 package refresh.towson.com.tracs;
 
-public class AppConfig {
+public  class AppConfig {
 
-       public static String URL_LOGIN = "http://192.168.0.102/applogin2.php";
+         String ServerLoginURL = "http://192.168.0.14/Project/TU_Codes_Connection/applogin2.php";
 
     }
-
