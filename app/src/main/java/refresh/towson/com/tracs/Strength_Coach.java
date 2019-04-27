@@ -89,7 +89,7 @@ public class Strength_Coach extends AppCompatActivity
 
         } else if (id == R.id.ic_action_search) {
 
-        } else if (id == R.id.ic_action_compare) {
+        } else if (id == R.id.nav_import) {
 
         } else if (id == R.id.ic_action_results) {
 

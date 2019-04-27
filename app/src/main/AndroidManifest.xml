@@ -3,6 +3,8 @@
     package="refresh.towson.com.tracs">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Permission for reading phone memory-->
+    <uses-permission android:name="andriod.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
