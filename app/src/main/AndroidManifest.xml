@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="refresh.towson.com.tracs">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Permission for reading phone memory-->
-    <uses-permission android:name="andriod.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permission for reading phone memory -->
+    <uses-permission android:name="andriod.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".search"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -47,7 +47,7 @@
         <activity
             android:name=".Strength_Coach"
             android:label="@string/title_activity_strength__coach"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
