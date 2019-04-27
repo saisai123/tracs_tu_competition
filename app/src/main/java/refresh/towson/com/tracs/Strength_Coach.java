@@ -107,7 +107,7 @@ public class Strength_Coach extends AppCompatActivity
 
         if (id == R.id.ic_action_profile) {
             // Handle the camera action
-            Intent intent = new Intent(Strength_Coach.this,Team_Coach_Scrolling.class);
+            Intent intent = new Intent(Strength_Coach.this,Strength_Coach_Scrolling_Activity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
