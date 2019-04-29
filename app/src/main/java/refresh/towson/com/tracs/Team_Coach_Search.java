@@ -1,16 +1,10 @@
 package refresh.towson.com.tracs;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.app.Activity;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.ListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
@@ -24,7 +18,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import android.widget.ProgressBar;
 import com.android.volley.RetryPolicy;
 import com.android.volley.DefaultRetryPolicy;
 
@@ -80,11 +73,8 @@ public  class Team_Coach_Search extends AppCompatActivity{
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 String teamname=   spinner.getItemAtPosition(spinner.getSelectedItemPosition()).toString();
-                teamname_select=String.valueOf(spinner.getSelectedItem());
                 Toast.makeText(getApplicationContext(),teamname,Toast.LENGTH_LONG).show();
-                //athelete_view.setVisibility(View.VISIBLE);
-                //spinner2.setVisibility(View.VISIBLE);
-                loadAthleteData(app.ServerAthleteNames,teamname_select);
+                loadAthleteData(app.ServerAthleteNames,teamname);
             }
 
             @Override
@@ -123,7 +113,7 @@ public  class Team_Coach_Search extends AppCompatActivity{
 
         RequestQueue requestQueue=Volley.newRequestQueue(getApplicationContext());
 
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        StringRequest stringRequest=new StringRequest(Request.Method.POST,url, new Response.Listener<String>() {
 
             @Override
 
@@ -175,7 +165,7 @@ public  class Team_Coach_Search extends AppCompatActivity{
     private void loadAthleteData(String url,String teamname_select) {
 
         RequestQueue requestQueue=Volley.newRequestQueue(getApplicationContext());
-
+        requestQueue.getCache().clear();
         StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 
             @Override
@@ -203,21 +193,18 @@ public  class Team_Coach_Search extends AppCompatActivity{
 
         }, new Response.ErrorListener() {
 
-
             @Override
-
             public void onErrorResponse(VolleyError error) {
 
                 error.printStackTrace();
 
             }
 
-        })
-        {
+        }){
             @Override
-            protected Map<String, String> getParams()
+            protected Map<String,String> getParams()
             {
-                Map<String, String>  params = new HashMap<String, String>();
+                Map<String,String>  params = new HashMap<String,String>();
                 params.put("teamname", teamname_select);
                 return params;
             }

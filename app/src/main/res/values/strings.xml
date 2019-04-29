@@ -22,11 +22,12 @@
     <string name="lblAcc">Select Account Type</string>
     <string name="lblSubAcc">Select Account Head</string>
     <string-array name="acc_type">
-            <item>Income</item>
-            <item>Expense</item>
+        <item>Income</item>
+        <item>Expense</item>
         <item>Income</item>
         <item>Expense</item>
     </string-array>
+    <string name="title_activity_strength_coach_search">strength_coach_search</string>
 
 
 </resources>

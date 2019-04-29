@@ -115,6 +115,12 @@ public class Strength_Coach extends AppCompatActivity
 
         } else if (id == R.id.ic_action_search) {
 
+            Intent intent = new Intent(Strength_Coach.this,Strength_Coach_Search.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+
         }
         // Import button on Menu
         else if (id == R.id.nav_import) {
