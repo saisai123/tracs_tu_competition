@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Strength_Coach_Search">
+
+    <include layout="@layout/activity_app_bar_back_button" />
+
+    <TextView
+        android:id="@+id/text_team_select"
+        style="android:attr/spinner_team_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="@string/select_a_team"
+        android:textAllCaps="false"
+        android:textColor="#808080"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#FFBE3B"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner_team_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="110dp"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/text_athl_team_selected"
+        style="android:attr/spinner_team_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="@string/select_a_athlete"
+        android:textAllCaps="false"
+        android:textColor="#808080"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#FFBE3B"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner_athl_team_selecte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="220dp"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/friend_request"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="300dp"
+        />
+
+    <!--android:layout_marginBottom="80dp"-->
+
+
+</android.support.design.widget.CoordinatorLayout>

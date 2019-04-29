@@ -2,33 +2,36 @@ package refresh.towson.com.tracs;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.Button;
-import android.widget.Spinner;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Toast;
-import android.view.View;
-import java.util.*;
+import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
-import org.json.*;
-import com.android.volley.RequestQueue;
+import android.widget.Toast;
+
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.android.volley.RetryPolicy;
-import com.android.volley.DefaultRetryPolicy;
 
-//Team_Coach_Search
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-
-public  class Team_Coach_Search extends AppCompatActivity {
-
-
+public class Strength_Coach_Search extends AppCompatActivity {
 
     //String URL="http://techiesatish.com/demo_api/spinner.php";
 
@@ -59,7 +62,7 @@ public  class Team_Coach_Search extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Team_Coach_Search.this,Team_Coach.class);
+                Intent intent = new Intent(Strength_Coach_Search.this,Strength_Coach.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
@@ -68,13 +71,13 @@ public  class Team_Coach_Search extends AppCompatActivity {
             }
         });
 
-        spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
                 String teamname=   spinner.getItemAtPosition(spinner.getSelectedItemPosition()).toString();
-                //Toast.makeText(getApplicationContext(),teamname,Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),teamname,Toast.LENGTH_LONG).show();
                 loadAthleteData(app.ServerAthleteNames,teamname);
             }
 
@@ -88,14 +91,14 @@ public  class Team_Coach_Search extends AppCompatActivity {
 
         });
 
-        spinner2.setOnItemSelectedListener(new OnItemSelectedListener() {
+        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
             @Override
 
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                String athlete_select=   spinner2.getItemAtPosition(spinner2.getSelectedItemPosition()).toString();
-               // Toast.makeText(getApplicationContext(),athlete_select,Toast.LENGTH_LONG).show();
+                String athlete_select=   spinner2.getItemAtPosition(spinner.getSelectedItemPosition()).toString();
+                Toast.makeText(getApplicationContext(),athlete_select,Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -108,12 +111,11 @@ public  class Team_Coach_Search extends AppCompatActivity {
 
         });
 
-
     }
 
     private void loadSpinnerData(String url) {
 
-        RequestQueue requestQueue=Volley.newRequestQueue(getApplicationContext());
+        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
 
         StringRequest stringRequest=new StringRequest(Request.Method.POST,url, new Response.Listener<String>() {
 
@@ -134,7 +136,7 @@ public  class Team_Coach_Search extends AppCompatActivity {
                         TeamName.add(team_name_ob.getString("teamname"));
                     }
 
-                spinner.setAdapter(new ArrayAdapter<String>(Team_Coach_Search.this, android.R.layout.simple_spinner_dropdown_item, TeamName));
+                    spinner.setAdapter(new ArrayAdapter<String>(Strength_Coach_Search.this, android.R.layout.simple_spinner_dropdown_item, TeamName));
 
                 }catch (JSONException e){e.printStackTrace();}
 
@@ -167,7 +169,7 @@ public  class Team_Coach_Search extends AppCompatActivity {
     private void loadAthleteData(String url,String teamname_select) {
 
         RequestQueue requestQueue=Volley.newRequestQueue(getApplicationContext());
-
+        requestQueue.getCache().clear();
         StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 
             @Override
@@ -187,7 +189,7 @@ public  class Team_Coach_Search extends AppCompatActivity {
                         AthleteName.add(athlete_name_ob.getString("athlete_name"));
                     }
 
-                    spinner2.setAdapter(new ArrayAdapter<String>(Team_Coach_Search.this, android.R.layout.simple_spinner_dropdown_item, AthleteName));
+                    spinner2.setAdapter(new ArrayAdapter<String>(Strength_Coach_Search.this, android.R.layout.simple_spinner_dropdown_item, AthleteName));
 
                 }catch (JSONException e){e.printStackTrace();}
 
@@ -222,14 +224,6 @@ public  class Team_Coach_Search extends AppCompatActivity {
 
     }
 
-
-
-
-
-
-
-
-}
-
+    }
 
 
