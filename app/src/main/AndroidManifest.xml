@@ -8,12 +8,21 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="TRACS"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
         <activity android:name=".athlete_search"></activity>
+        <activity
+            android:name=".Strength_Coach_Search"
+            android:label="@string/title_activity_strength_coach_search"
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
+        <activity android:name=".Team_Coach_Search" />
+        <activity
+            android:name=".app_bar_back_button"
+            android:label="@string/title_activity_app_bar_back_button"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Team_Coach_Scrolling"
             android:label="@string/title_activity_team__coach__scrolling"
@@ -24,7 +33,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label="TRACS"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

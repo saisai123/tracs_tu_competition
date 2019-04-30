@@ -86,6 +86,11 @@ public class Team_Coach extends AppCompatActivity
             finish();
 
         } else if (id == R.id.ic_action_search) {
+            Intent intent = new Intent(Team_Coach.this,Team_Coach_Search.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
 
         } else if (id == R.id.ic_action_compare) {
 
