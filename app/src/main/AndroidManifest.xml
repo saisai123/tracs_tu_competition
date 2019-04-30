@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="refresh.towson.com.tracs">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Permission for reading phone memory-->
-    <uses-permission android:name="andriod.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permission for reading phone memory -->
+    <uses-permission android:name="andriod.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,12 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity android:name=".athlete_search"></activity>
         <activity
             android:name=".Team_Coach_Scrolling"
             android:label="@string/title_activity_team__coach__scrolling"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Strength_Coach_Scrolling_Activity"
             android:label="@string/title_activity_strength__coach__scrolling_"

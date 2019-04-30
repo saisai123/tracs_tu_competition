@@ -1,5 +1,7 @@
 package refresh.towson.com.tracs;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     EditText email;
     EditText password;
     Button login;
+
+
     ProgressDialog progressDialog;
     public static final String UserEmail = "";
     String finalResult ;
@@ -26,22 +30,29 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         email= findViewById(R.id.input_email);
         login= findViewById(R.id.login_bt);
         password= findViewById(R.id.input_password);
+
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String e=email.getText().toString();
                 String p=password.getText().toString();
                 UserLoginFunction(e,p);
+                Session.message = e;
+                Intent intent = new Intent(getApplicationContext(), athlete_search.class);
+                startActivity(intent);
             }
         });
     }
 
 
+
+
     public void UserLoginFunction(final String email, final String password){
+
 
         class UserLoginClass extends AsyncTask<String,Void,String> {
 

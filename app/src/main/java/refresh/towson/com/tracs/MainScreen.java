@@ -18,6 +18,7 @@ import android.view.MenuItem;
 public class MainScreen extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +87,11 @@ public class MainScreen extends AppCompatActivity
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_action_search) {
-
+            Intent intent = new Intent(MainScreen.this, athlete_search.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_compare) {
 
         } else if (id == R.id.nav_results) {
