@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Athlete_Search"></activity>
         <activity
             android:name=".Strength_Coach_Search"
             android:label="@string/title_activity_strength_coach_search"

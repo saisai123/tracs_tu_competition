@@ -97,7 +97,11 @@ public class Team_Coach extends AppCompatActivity
         } else if (id == R.id.nav_sleep) {
 
         } else if (id == R.id.nav_results) {
-
+            Intent intent = new Intent(Team_Coach.this,View_Results_Team_Coach.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         } else if (id == R.id.nav_settings) {
 
         }
