@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Compare_Friend_Athlete">
+
+    <include layout="@layout/activity_app_bar_back_button" />
+
+
+    <TextView
+        android:id="@+id/select_friend"
+        style="android:attr/spinner_team_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="@string/select_a_friend"
+        android:textAllCaps="false"
+        android:textColor="#808080"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#FFBE3B"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner_select_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"
+        android:scrollbars="vertical"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/text_result__type"
+        style="android:attr/spinner_team_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="@string/select_result_type"
+        android:textAllCaps="false"
+        android:textColor="#808080"
+        android:textColorHighlight="#000000"
+        android:textColorLink="#FFBE3B"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner_result_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="200dp"
+        android:scrollbars="vertical"
+        android:textAlignment="center"
+        android:entries="@array/result_type"
+        />
+    <Button
+        android:id="@+id/compare_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/compare"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="260dp"
+        />
+
+    <!--android:layout_marginBottom="80dp"-->
+
+
+</android.support.design.widget.CoordinatorLayout>

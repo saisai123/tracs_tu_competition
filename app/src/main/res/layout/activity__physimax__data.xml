@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Activity_Physimax_Data">
+
+    <include layout="@layout/activity_app_bar_back_button" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/heading1"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="Measures"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+            <TextView
+                android:id="@+id/heading2"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="CODES_001"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+            <TextView
+                android:id="@+id/heading3"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="20dp"
+                android:text="CODES_0001"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <include layout="@layout/item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/sls_left_score"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="SLS LEFT SCORE"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+            <TextView
+                android:id="@+id/sls_left_score_1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                app:fontFamily="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+
+            <TextView
+                android:id="@+id/sls_left_score_2"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                app:fontFamily="serif" />
+
+        </LinearLayout>
+
+        <include layout="@layout/item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/sls_left_valgus"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="SLS LEFT VALGUS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+            <TextView
+                android:id="@+id/sls_left_valgus_1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                app:fontFamily="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+
+            <TextView
+                android:id="@+id/sls_left_valgus_2"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                app:fontFamily="serif" />
+
+        </LinearLayout>
+
+        <include layout="@layout/item_divider" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/sls_left_valgus_err"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="SLS LEFT VALGUS ERROR"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+            <TextView
+                android:id="@+id/sls_left_valgus_err_1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                app:fontFamily="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+
+            <TextView
+                android:id="@+id/sls_left_valgus_err_2"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                app:fontFamily="serif" />
+        </LinearLayout>
+
+        <include layout="@layout/item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/sls_right_score"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="SLS RIGHT SCORE"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+            <TextView
+                android:id="@+id/sls_right_score_1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                app:fontFamily="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+
+            <TextView
+                android:id="@+id/sls_right_score_2"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                app:fontFamily="serif" />
+
+        </LinearLayout>
+
+        <include layout="@layout/item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/sls_right_score_valgus"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="SLS RIGHT SCORE VALGUS "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+            <TextView
+                android:id="@+id/sls_right_score_valgus1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+
+            <TextView
+                android:id="@+id/sls_right_score_valgus2"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <include layout="@layout/item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
+
+
+            <TextView
+                android:id="@+id/sls_right_score_valgus_error"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="SLS RIGHT VALGUS ERROR"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+            <TextView
+                android:id="@+id/sls_right_score_valgus_error_1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:typeface="serif" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:background="#0C0C1A" />
+
+
+            <TextView
+                android:id="@+id/sls_right_score_valgus_error_2"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="--"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="14sp"
+                android:typeface="serif" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</TableLayout>

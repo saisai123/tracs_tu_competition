@@ -13,10 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Activity_Physimax_Data"></activity>
+        <activity android:name=".Compare_FMS_Data" />
+        <activity android:name=".Compare_Body_Composition" />
+        <activity android:name=".Compare_Friend_Athlete" />
+        <activity android:name=".Team_Coach_Physimax" />
+        <activity android:name=".Team_Coach_Fms_Data" />
+        <activity android:name=".View_Results_Team_Coach_display" />
+        <activity android:name=".View_Results_Team_Coach" />
         <activity
             android:name=".Strength_Coach_Search"
             android:label="@string/title_activity_strength_coach_search"
-            android:theme="@style/AppTheme.NoActionBar.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar.NoActionBar" />
         <activity android:name=".Team_Coach_Search" />
         <activity
             android:name=".app_bar_back_button"
