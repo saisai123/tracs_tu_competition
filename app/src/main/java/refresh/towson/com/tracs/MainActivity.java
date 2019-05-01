@@ -17,13 +17,14 @@ public class MainActivity extends AppCompatActivity {
     EditText email;
     EditText password;
     Button login;
-
-
+    SharedPreferences sharedPreferences;
+    public static final String MyPreferences="MyPrefs";
     ProgressDialog progressDialog;
     public static final String UserEmail = "";
     String finalResult ;
     HashMap<String,String> hashMap = new HashMap<>();
     HttpParse httpParse = new HttpParse();
+
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,22 +34,21 @@ public class MainActivity extends AppCompatActivity {
         email= findViewById(R.id.input_email);
         login= findViewById(R.id.login_bt);
         password= findViewById(R.id.input_password);
-
+        sharedPreferences = getSharedPreferences(MyPreferences,Context.MODE_PRIVATE);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String e=email.getText().toString();
                 String p=password.getText().toString();
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("Email_ID", e);
+                editor.commit();
                 UserLoginFunction(e,p);
-                Session.message = e;
-                Intent intent = new Intent(getApplicationContext(), athlete_search.class);
-                startActivity(intent);
+
             }
         });
     }
-
-
 
 
     public void UserLoginFunction(final String email, final String password){
@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra(UserEmail,email);
 
                     startActivity(intent);
+
 
                 }
                 else if(httpResponseMsg.equalsIgnoreCase("strength_coach")){
